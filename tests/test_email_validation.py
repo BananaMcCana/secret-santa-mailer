@@ -1,12 +1,11 @@
 import unittest
-import importlib
 import re
 import sys
 import os
 
 # Import the is_email_valid function
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-is_email_valid = importlib.import_module("secret-santa-mailer").is_email_valid
+from secret_santa.secret_santa_mailer import is_email_valid
 
 class TestEmailValidation(unittest.TestCase):
     def test_valid_emails(self):
